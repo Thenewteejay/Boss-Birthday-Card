@@ -11,4 +11,4 @@ This card is designed using **Tailwind CSS** to celebrate my boss's birthday.
 
 ## How to View
 
-The project is hosted on Vercel.
+The project is hosted on Vercel. [https://boss-birthday-card.vercel.app/]
