@@ -1,98 +1,131 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Happy Birthday Boss!</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       // Tailwind configuration for dark mode
       tailwind.config = {
-        darkMode: 'class',
-      }
+        darkMode: "class",
+      };
     </script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-</head>
-<body class="bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
-
-<div class="fixed top-4 right-4 z-50">
-  <button onclick="toggleDarkMode()" class="bg-white dark:bg-gray-800 p-3 rounded-full shadow-lg hover:scale-110 transition">
-    <span id="theme-icon" class="text-xl">🌙</span>
-  </button>
-</div>
-
-<div class="min-h-screen flex items-center justify-center p-4">
-  <div class="max-w-md w-full bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden transform transition hover:scale-[1.02] duration-300">
-    
-    <div class="h-16 bg-gradient-to-r from-blue-600 to-indigo-700 flex items-center justify-center">
-      <h1 class="text-white text-2xl font-bold tracking-wider">🎉 HAPPY BIRTHDAY! 🎂</h1>
+  </head>
+  <body class="bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
+    <div class="fixed top-4 right-4 z-50">
+      <button
+        onclick="toggleDarkMode()"
+        class="bg-white dark:bg-gray-800 p-3 rounded-full shadow-lg hover:scale-110 transition"
+      >
+        <span id="theme-icon" class="text-xl">🌙</span>
+      </button>
     </div>
 
-    <div class="p-5">
-      <div class="text-center mb-6">
-        <h2 class="text-xl font-bold text-gray-800 dark:text-white">To my Boss & Mentor</h2>
-        <div class="h-1 w-16 bg-blue-500 mx-auto mt-2 rounded-full"></div>
-      </div>
+    <div class="min-h-screen flex items-center justify-center p-4">
+      <div
+        class="max-w-md w-full bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden transform transition hover:scale-[1.02] duration-300"
+      >
+        <div
+          class="h-16 bg-gradient-to-r from-blue-600 to-indigo-700 flex items-center justify-center"
+        >
+          <h1 class="text-white text-2xl font-bold tracking-wider">
+            🎉 HAPPY BIRTHDAY! 🎂
+          </h1>
+        </div>
 
-      <div class="space-y-4 text-gray-600 dark:text-gray-300 leading-relaxed">
-        <div class="flex flex-col sm:flex-row gap-3 bg-white dark:bg-gray-700 shadow-sm rounded-xl border-r-4 border-blue-500 overflow-hidden border border-gray-100 dark:border-gray-600">
-          <img src="https://scontent.fiba2-1.fna.fbcdn.net/v/t39.30808-6/619601767_26393972896873035_221851246586756023_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeE4p0a8ZqQ3UKLF6h4Hs4EYiET7mkQGexyIRPuaRAZ7HLa27vW_FRo8fHb-166Mlay55J-9TcxDqkQ5TSk8Xn8c&_nc_ohc=gODjdI9TK0QQ7kNvwGc2tn0&_nc_oc=Adm15teYxetmDx8cgOrHnl2rfK0rC5B2XAjayB6Tiyw3eogIsOR5aKRfs9ei_g7TSeA&_nc_zt=23&_nc_ht=scontent.fiba2-1.fna&_nc_gid=Na9HwvOherBsmxMUe3SL5w&oh=00_Afri3mwihPsuawDjB_WhhN8uzGMz6ozvt7_pZcvjreMT7Q&oe=697796AA" 
-               class="w-full sm:w-32 h-40 object-cover" alt="Boss">
-          <div class="p-2">
-            <p class="font-semibold text-sm leading-tight mb-2">
-              Today is not just about your new age, but about appreciating the leader you are.
+        <div class="p-5">
+          <div class="text-center mb-6">
+            <h2 class="text-xl font-bold text-gray-800 dark:text-white">
+              To my Boss & Mentor
+            </h2>
+            <div class="h-1 w-16 bg-blue-500 mx-auto mt-2 rounded-full"></div>
+          </div>
+
+          <div
+            class="space-y-4 text-gray-600 dark:text-gray-300 leading-relaxed"
+          >
+            <div
+              class="flex flex-col sm:flex-row gap-3 bg-white dark:bg-gray-700 shadow-sm rounded-xl border-r-4 border-blue-500 overflow-hidden border border-gray-100 dark:border-gray-600"
+            >
+              <img
+                src="boss_image.jpg"
+                class="w-full h-auto max-h-64 object-contain bg-gray-50 dark:bg-gray-900 rounded-lg"
+                alt="Boss"
+              />
+              <div class="p-2">
+                <p class="font-semibold text-sm leading-tight mb-2">
+                  Today is not just about your new age, but about appreciating
+                  the leader you are.
+                </p>
+                <p
+                  class="text-xs font-medium text-blue-600 dark:text-blue-400 italic"
+                >
+                  "Zero bugs, 100% uptime, and successful deployments only!"
+                </p>
+              </div>
+            </div>
+
+            <p
+              class="bg-blue-50 dark:bg-blue-900/30 p-4 rounded-lg border-l-4 border-blue-500 italic text-sm"
+            >
+              "I want to sincerely thank you for everything you have done for
+              me. Your support and the opportunities you've given me to grow as
+              a developer mean more than I can say."
             </p>
-            <p class="text-xs font-medium text-blue-600 dark:text-blue-400 italic">
-              "Zero bugs, 100% uptime, and successful deployments only!"
+
+            <p class="text-xs text-center px-2">
+              Wishing you long life and prosperity, sir. May this new year bring
+              even more wins!
             </p>
           </div>
+
+          <div
+            class="mt-6 pt-4 border-t border-gray-100 dark:border-gray-700 flex justify-between items-center"
+          >
+            <span
+              class="text-[10px] font-bold text-gray-400 uppercase tracking-widest"
+              >Teejay's Care</span
+            >
+            <button
+              onclick="fireConfetti()"
+              class="bg-indigo-600 text-white px-4 py-2 rounded-full text-xs font-bold hover:bg-indigo-700 shadow-md"
+            >
+              Surprises 🥂
+            </button>
+          </div>
         </div>
-        
-        <p class="bg-blue-50 dark:bg-blue-900/30 p-4 rounded-lg border-l-4 border-blue-500 italic text-sm">
-          "I want to sincerely thank you for everything you have done for me. Your support and the opportunities you've given me to grow as a developer mean more than I can say."
-        </p>
-
-        <p class="text-xs text-center px-2">
-          Wishing you long life and prosperity, sir. May this new year bring even more wins!
-        </p>
-      </div>
-
-      <div class="mt-6 pt-4 border-t border-gray-100 dark:border-gray-700 flex justify-between items-center">
-        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Teejay's Care</span>
-        <button onclick="fireConfetti()" class="bg-indigo-600 text-white px-4 py-2 rounded-full text-xs font-bold hover:bg-indigo-700 shadow-md">
-          Surprises 🥂
-        </button>
       </div>
     </div>
-  </div>
-</div>
 
-<script>
-  // Dark Mode Logic
-  function toggleDarkMode() {
-    const html = document.documentElement;
-    const icon = document.getElementById('theme-icon');
-    
-    if (html.classList.contains('dark')) {
-      html.classList.remove('dark');
-      icon.innerText = '🌙';
-    } else {
-      html.classList.add('dark');
-      icon.innerText = '☀️';
-    }
-  }
+    <script>
+      // Dark Mode Logic
+      function toggleDarkMode() {
+        const html = document.documentElement;
+        const icon = document.getElementById("theme-icon");
 
-  window.onload = function() { fireConfetti(); };
+        if (html.classList.contains("dark")) {
+          html.classList.remove("dark");
+          icon.innerText = "🌙";
+        } else {
+          html.classList.add("dark");
+          icon.innerText = "☀️";
+        }
+      }
 
-  function fireConfetti() {
-    confetti({
-      particleCount: 150,
-      spread: 70,
-      origin: { y: 0.6 },
-      colors: ['#2563eb', '#4f46e5', '#fbbf24']
-    });
-  }
-</script>
+      window.onload = function () {
+        fireConfetti();
+      };
 
-</body>
+      function fireConfetti() {
+        confetti({
+          particleCount: 150,
+          spread: 70,
+          origin: { y: 0.6 },
+          colors: ["#2563eb", "#4f46e5", "#fbbf24"],
+        });
+      }
+    </script>
+  </body>
 </html>
